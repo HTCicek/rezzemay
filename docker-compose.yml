@@ -1,0 +1,27 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=password
+  api:
+    build: ./rezzemay-backend
+    command: bash -c "cd rezzemay-backend && rm -f tmp/pids/server.pid && rails db:create && rails db:migrate && rails db:seed && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/rezzemay-api
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+  web:
+    build: ./rezzemay-frontend
+    # command: npm start -a localhost -p 3001
+    # volumes:
+      # - .:/rezzemay-web
+      # - /rezzemay-web/node_modules
+    ports:
+      - "3001:3000"
+    depends_on:
+      - api
