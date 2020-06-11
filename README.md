@@ -14,9 +14,13 @@ Rezzemay is a web app that gives users a quick-to-set-up and easy-to-share singl
 git clone https://github.com/HTCicek/rezzemay.git
 cd rezzemay
 docker-compose build && docker-compose up
+
+# don't mind the connection messages from api_1:
+# # docker-compose.yml command for backend waits until postgres is accepting connections in order to migrate.
 ```
 
-docker-compose.yml command for backend waits until postgres is accepting connections in order to migrate.
+enter the web client from localhost:3001
+
 
 ## Web Client
 
