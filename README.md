@@ -16,6 +16,8 @@ cd rezzemay
 docker-compose build && docker-compose up
 ```
 
+docker-compose.yml command for backend waits until postgres is accepting connections in order to migrate.
+
 ## Web Client
 
 Bootstrapped with create-react-app.
