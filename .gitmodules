@@ -1,6 +1,6 @@
 [submodule "rezzemay-backend"]
 	path = rezzemay-backend
-	url = https://github.com/maryfarner18/rezzemay-backend
+	url = https://github.com/htcicek/rezzemay-backend
 [submodule "rezzemay-frontend"]
 	path = rezzemay-frontend
-	url = https://github.com/maryfarner18/rezzeamy-frontend
+	url = https://github.com/htcicek/rezzemay-frontend
